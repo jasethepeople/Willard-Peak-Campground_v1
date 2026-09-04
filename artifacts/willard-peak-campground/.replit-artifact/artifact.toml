@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Willard Peak Campground"
+description = "A tactile, editorial campground website for Willard Peak Campground in Willard, Utah, with a cinematic landscape story and practical stay-planning path."
+version = "1.0.0"
+id = "artifacts/willard-peak-campground"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25223
+
+[services.development]
+run = "pnpm --filter @workspace/willard-peak-campground run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/willard-peak-campground", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/willard-peak-campground/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25223"
+BASE_PATH = "/"

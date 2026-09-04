@@ -1,6 +1,6 @@
-# [Project name]
+# Willard Peak Campground
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A tactile, editorial campground website for planning a slower night at Willard Peak Campground in Willard, Utah.
 
 ## Run & Operate
 
@@ -22,15 +22,22 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/willard-peak-campground/src/App.tsx` — single-page campground experience and interactions
+- `artifacts/willard-peak-campground/src/index.css` — editorial field-guide visual system, responsive layout, and motion
+- `artifacts/willard-peak-campground/.replit-artifact/artifact.toml` — artifact metadata and managed web workflow
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The site is presentation-first and intentionally does not invent booking, pricing, amenity, or operational data.
+- The stay-planning form is a client-side planning aid with explicit copy that no booking inbox is connected yet.
+- The provided campground address is the source of truth for the Google Maps action and visit section.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Editorial landing page inspired by a printed field guide
+- Responsive anchor navigation with mobile menu
+- Stay-planning form with honest submission feedback
+- Direct Google Maps action for the campground address
 
 ## User preferences
 
